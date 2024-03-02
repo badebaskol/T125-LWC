@@ -1,0 +1,40 @@
+<template>
+    
+
+
+<lightning-card  title="Data Binding Tek Yon">
+ 
+<h1>Benim Adim RESUL</h1>
+<h1>Benim Adim2 {isim}</h1>
+
+<br><br>
+<h1>Kisinin Ismi {kisi} </h1>
+<h1>Kisinin Ismi {kisi.isim} </h1>
+<h1>Kisinin Yasi {kisi.yas} </h1>
+<h1>Kisinin Oyunlar {kisi.oyunlar} </h1>
+
+<!--  <h1>Kisinin Oyun1 {kisi.oyunlar} </h1>
+
+    yukaridaki code calismaz. [0] kismini goremez.
+-->
+
+
+</lightning-card>
+
+<br><br>
+
+<lightning-card title="Data Binding Cift Yon">
+
+ <lightning-input 
+
+    type="text" 
+    label="Adinizi Giriniz" 
+    onchange={handleChange} 
+
+    ></lightning-input>
+
+<h1>Benim adim >>> {ad} </h1>
+
+</lightning-card>
+
+</template>
