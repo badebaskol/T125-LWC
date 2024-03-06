@@ -1,0 +1,118 @@
+<template>
+
+    <lightning-card title="CSS Ogreniyoruz" >
+
+       <!-- SFDS /// CSS for Salesforce
+        https://www.lightningdesignsystem.com/
+       -->
+       
+
+       <div class="slds-grid slds-wrap">
+        
+        <div class="slds-col slds-size_5-of-12 slds-box ">
+
+            
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col">
+                    <h1>Parent H1 Tagi Onceki Hal</h1>
+        
+                    <div class="slds-box slds-box_x-small slds-align_absolute-center">
+                     <h1>Parent H1 Tagi</h1>
+                     </div>
+                </div>
+                <div class="slds-col">
+                    <p>Parent P Tagi</p>
+                </div>
+                </div>
+
+           
+        </div>
+
+        <div class="slds-col slds-size_6-of-12 slds-box">
+
+             <!-- 
+             kebab-case >>>child component cagirmak icin 
+             snake_case
+             camelCase
+             PascalCase
+            -->
+
+            <c-a05child></c-a05child>
+            <!-- 
+           child component cagirilsa bile parentin css inden etkilenmez
+           her componentin kendi css i olmalidir
+          -->
+   
+        </div>
+        
+        </div>
+
+
+        <div  class="slds-grid slds-wrap">
+            <div  class="slds-col slds-size_1-of-12" >
+            <span>1</span>
+            </div>
+            
+            <div  class="slds-col slds-size_10-of-12" >
+                
+                <table  class="slds-table slds-table_cell-buffer slds-table_bordered" aria-label="Example default base table of Opportunities">
+                    <thead>
+                    <tr class="slds-line-height_reset">
+                    <th class="" scope="col">
+                    <div  class="slds-truncate" title="Cicek Id">Cicek Id </div>
+                    </th>
+                    <th class="" scope="col">
+                    <div class="slds-truncate" title="Cicek Adi">Cicek Adi</div>
+                    </th>
+                    <th class="" scope="col">
+                    <div class="slds-truncate" title="Cicek Familya">Cicek Familya</div>
+                    </th>
+                   
+                    <th class="" scope="col">
+                    <div class="slds-truncate" title="Cicek Resmi">Cicek Resmi</div>
+                    </th>
+                    </tr>
+                    </thead>
+
+                    <tbody >
+                        <template  for:each={cicekListesi} for:item="cicek">  
+                    <tr key={cicek.id} class="slds-hint-parent" >
+
+                    <th  data-label={cicek.id} scope="row" >
+                        <div  class="slds-truncate"  title={cicek.id}>{cicek.id} </div>
+                    </th>
+
+                    <td data-label="Cicek Adi">
+                        <div class="slds-truncate" title={cicek.name}>{cicek.name}</div>
+                    </td>
+
+                    <td data-label="Cicek Familya">
+                        <div class="slds-truncate" title={cicek.familya}>{cicek.familya}</div>
+                    </td>
+                    
+                    <td data-label="Cicek Resmi">
+                        <div class="slds-truncate" title={cicek.name}>
+                            <a href={cicek.imgUrl} aria-label={cicek.imgUrl} >
+                                <img src={cicek.imgUrl} alt={cicek.name} width="200" height="250" > <label>image</label> </a>
+                    
+                    </div>
+                    </td>
+                    </tr>
+                        </template>
+                    </tbody>
+                    </table>
+                
+            </div>
+            <div class="slds-col slds-size_1-of-12">
+            <span>1</span>
+            </div>
+            </div>
+
+
+
+
+
+
+    </lightning-card>
+
+</template>

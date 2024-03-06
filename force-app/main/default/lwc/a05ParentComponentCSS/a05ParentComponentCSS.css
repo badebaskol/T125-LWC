@@ -1,0 +1,11 @@
+
+h1{
+    color:rgb(0, 136, 255);
+}
+
+c-a05child{
+    color: brown;
+    /*Styling Hook---parent css den child css etkileme*/
+    --guzelRengi: blue;
+}
+
