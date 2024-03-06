@@ -1,0 +1,51 @@
+<template>
+
+    <lightning-card title="PICKLIST ">
+
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col">
+           
+                <lightning-combobox   name ='Araba'
+                             label="Araba Modelini Seciniz"
+                             options={arabaOptions}
+                             value={chosenAraba}
+                             onchange={handlePicklist}>
+  
+              </lightning-combobox>
+            <h1> Araba >>> {chosenAraba}</h1>
+
+            </div>
+            <div class="slds-col">
+          
+                <lightning-combobox   name ='Kasa'
+                             label="Kasa Tipini Seciniz"
+                             options={kasaTipiOptions}
+                             value={chosenKasa}
+                             onchange={handlePicklist1}>
+  
+              </lightning-combobox>
+            <h1> Kasa Tipi >>> {chosenKasa}</h1>
+
+            </div>
+            <div class="slds-col">
+            
+                <lightning-combobox   name ='Kasa'
+                             label="Kasa Tipini Seciniz"
+                             options={kasaTipiOptions}
+                             value={chosenKasa}
+                             onchange={handlePicklist1}>
+  
+              </lightning-combobox>
+            <h1> Kasa Tipi >>> {chosenKasa}</h1>
+            
+            </div>
+            </div>
+
+
+
+
+           
+
+    </lightning-card>  
+ 
+  </template>
