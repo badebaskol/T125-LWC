@@ -1,9 +1,30 @@
 <template>
-    <h1>Burasi BUYUKBABA</h1>
-    <br>
-
-
-
-
     
-</template>
+    <lightning-card title="Araba Model Secimi">
+    <h1>BURASI BUYUK BABA</h1>
+    
+    <br>
+    <div class="slds-p-around_medium lgc-bg">
+        <lightning-input 
+           type="text" 
+          label="Araba Modelini Yaziniz"
+          onblur ={handleArabaModeli}
+        ></lightning-input>
+    </div>
+    
+    
+    <h1> araba modeli >>>> {arabaModeli } </h1>
+    
+    
+    <br>
+    <br>
+    
+    <c-a07-baba
+     torun-araba-modeli ={arabaModeli}
+    
+    >
+    
+    </c-a07-baba> 
+    </lightning-card>
+    
+    </template>
