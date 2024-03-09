@@ -3,28 +3,32 @@
     <lightning-card title="Araba Model Secimi">
     <h1>BURASI BUYUK BABA</h1>
     
-    <br>
-    <div class="slds-p-around_medium lgc-bg">
-        <lightning-input 
-           type="text" 
-          label="Araba Modelini Yaziniz"
-          onblur ={handleArabaModeli}
-        ></lightning-input>
+    <div class="slds-grid slds-gutters">
+        <div class="slds-col">
+       
+            <lightning-combobox   name ='Araba'
+                         label="Araba Modelini Seciniz"
+                         options={arabaOptions}
+                         value={chosenAraba}
+                         onchange={handleArabaModeli}>
+
+          </lightning-combobox>
+        
+        </div>
+    
+        <div class="slds-col">
+            <c-a07-baba
+            torun-araba-modeli ={chosenAraba}
+           
+           >
+           
+           </c-a07-baba> 
+        </div>
+
+        
     </div>
     
-    
-    <h1> araba modeli >>>> {arabaModeli } </h1>
-    
-    
-    <br>
-    <br>
-    
-    <c-a07-baba
-     torun-araba-modeli ={arabaModeli}
-    
-    >
-    
-    </c-a07-baba> 
+   
     </lightning-card>
     
     </template>

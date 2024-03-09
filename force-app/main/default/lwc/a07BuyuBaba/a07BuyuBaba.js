@@ -2,13 +2,22 @@ import { LightningElement } from 'lwc';
 
 export default class A07BuyuBaba extends LightningElement {
 
-    arabaModeli=''
-
-handleArabaModeli(eve){
-    this.arabaModeli =eve.target.value
-
-      console.log(this.arabaModeli) // system.debug
-}
-
+    chosenAraba='';
+    arabaOptions= [ {label : 'Honda' , value:'Honda'},
+                    {label : 'Toyota' , value:'Toyota'},
+                    {label : 'BMW' , value:'BMW'},
+                    {label : 'Mercedes' , value:'Mercedes'}
+                   ]
+    
+    get arabaOptions(){
+    
+        return this.arabaOptions
+    } 
+    
+    handlePicklist(event){
+    
+        this.chosenAraba = event.detail.value;
+    }
+    
 
 }

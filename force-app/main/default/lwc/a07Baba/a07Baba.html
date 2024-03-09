@@ -2,23 +2,31 @@
     <lightning-card title="Araba ozellikleri">
  
  <h1> BURASI BABA</h1>
- 
- <div class="slds-p-around_medium lgc-bg">
-     <lightning-input 
-        type="text" 
-       label="Kasa Tipi Yaziniz"
-       onblur ={handleKasaTipi}
-     ></lightning-input>
- </div>
- 
- <br>
- <br>
- <c-a07-torun-comp 
-  kasa-sekli ={kasaTipi}
-  araba-modeli ={torunArabaModeli}
- >
- 
- </c-a07-torun-comp>
+ <div class="slds-grid slds-gutters">
+ <div class="slds-col">
+            
+    <lightning-combobox   name ='Kasa'
+                 label="Kasa Tipini Seciniz"
+                 options={kasaTipiOptions}
+                 value={chosenKasa}
+                 onchange={handleKasaTipi}>
+
+  </lightning-combobox>
+
+</div>
+
+
+ <div class="slds-col">
+    
+    <c-a07-torun-comp 
+    kasa-sekli ={chosenKasa}
+    araba-modeli ={torunArabaModeli}
+    >
+    
+    </c-a07-torun-comp>
+
+</div>
+</div>
     </lightning-card> 
  
  
