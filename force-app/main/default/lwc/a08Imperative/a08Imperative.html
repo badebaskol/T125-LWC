@@ -1,0 +1,35 @@
+<template>
+    <lightning-card title="Imperative Yontem ile" >
+
+
+        <template for:each={accListesi} for:item="acc">
+            <div key={acc.id} >     
+        
+                <p> !!!!Account Adi>> {acc.Name} ,   !!!! acc tel >> {acc.Phone}    </p>
+               
+                  <br> 
+            </div>
+               
+        </template>
+    
+    <br>
+
+    <div class="slds-p-around_medium lgc-bg">
+        <lightning-input 
+        type="text" 
+        label="Acc adini giriniz"
+        onchange={handleAccountIsim}
+        ></lightning-input>
+    </div>
+    
+
+
+    <lightning-button 
+        variant="success" 
+        label="Account Getir" 
+        title="Successful action" 
+        onclick={handleClick} 
+        class="slds-m-left_x-small"></lightning-button>
+    
+    </lightning-card>
+</template>

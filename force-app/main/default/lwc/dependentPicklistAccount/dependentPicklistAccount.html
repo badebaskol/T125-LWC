@@ -1,0 +1,33 @@
+<template>
+    <lightning-card title=" Dependent Picklist">
+
+        <lightning-combobox name="Continent"
+
+        label="Continent"
+
+        placeholder="Select Continent"
+
+        options={kitaOptions}
+
+        onchange={handleContinentChange}>
+
+    </lightning-combobox>
+
+
+    <lightning-combobox name="Country"
+
+        label="Country"
+
+        placeholder="Select COuntry"
+
+        options={ulkeOptions}
+
+        onchange={handleCountryChange}>>
+
+    </lightning-combobox>
+
+
+
+    </lightning-card>
+
+</template>

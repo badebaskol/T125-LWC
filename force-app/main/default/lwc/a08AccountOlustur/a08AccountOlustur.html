@@ -1,0 +1,31 @@
+<template>
+    <lightning-card title="Account Olustur" >
+  
+
+    <div class="slds-p-around_medium lgc-bg">
+        <lightning-input 
+        type="text" 
+        label="Acc adini giriniz"
+        onchange={handleAccountIsim}
+        required
+        ></lightning-input>
+    </div>
+
+    <div class="slds-p-around_medium lgc-bg">
+        <lightning-input 
+        type="text" 
+        label="Telefon Giriniz"
+        onchange={handleAccountTelefon}
+        ></lightning-input>
+    </div>
+
+
+    <lightning-button 
+        variant="success" 
+        label="Account Olustur" 
+        title="Successful action" 
+        onclick={handleAccountOlustur} 
+        class="slds-m-left_x-small"></lightning-button>
+    
+    </lightning-card>
+</template>
