@@ -1,5 +1,5 @@
 import { LightningElement } from 'lwc';
-import accOlustur from '@salesforce/apex/AccountController.AccountOlustur'
+import accOlustur from '@salesforce/apex/AccountController.accountOlustur'
 	
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 

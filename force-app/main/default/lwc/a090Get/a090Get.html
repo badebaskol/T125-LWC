@@ -1,0 +1,33 @@
+<template>
+    
+    <lightning-card title=" GET methodu">
+    
+        <h1>{sayi1} ile {sayi2}  toplami {toplam} dir </h1>
+        <h1>GET {sayi1} ile {sayi2}  toplami {sayiToplam} dir </h1>
+    <br>
+    <h1> LISTEDEN ISIM GETIRME</h1>
+    <h1> array 1. isim {secilenIsim}</h1>
+    
+    <h1> GET array 1. isim {secilenIsimGet}</h1>
+    
+    </lightning-card>
+    
+    <lightning-card title="GET calisir">
+        <lightning-input 
+        type="text"
+        label="Lutfen sayi giriniz!!!"
+        placeholder="sayi buraya"
+        min=0
+       
+        onchange={handleIndex}></lightning-input>
+    
+        <h1> girilen inedex deki isim {secilenIsimFiltre}</h1>
+        <h1>GET girilen inedex deki isim {secilenIsimFiltreGet}</h1>
+    
+    
+    
+    </lightning-card>
+    
+    
+    
+    </template>
