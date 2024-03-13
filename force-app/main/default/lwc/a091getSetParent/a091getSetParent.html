@@ -1,70 +1,72 @@
 <template>
     
-<lightning-card title="PRIMITIVE DATA TO CHILD">
-
-<p> BURASI PARENT</p>
-
-
-<br>
-
-<lightning-input 
-    type="text" 
-    label="Lutfen isminiz giriniz" 
-    onblur={handleIsim}></lightning-input>
-
-
-<c-a091primitive-child 
- parentdan-geldi={isim}
- parenttan-get ={isim}
- >
-
-</c-a091primitive-child>
-
-</lightning-card>
-
-
-
-
-<br>
-<lightning-card title="OBJECT DATA TO KEDNIME">
+    <lightning-card title="PRIMITIVE DATA TO CHILD">
+    
+    <p> BURASI PARENT</p>
+    
+    
+    <br>
+    
     <lightning-input 
-    type="text" 
-    label="Lutfen Musteri isim giriniz" 
-    onblur={handleMusteriIsim}></lightning-input>
-
-    <lightning-input 
-    type="text" 
-    label="Lutfen Musteri YAS giriniz" 
-    onblur={handleMusteriYAS}></lightning-input>
-<br>
-<!--   
-<p>  musteri ismi {musteri.isim}</p>
-<p>  musteri yasi {musteri.yas}</p>
-
--->
-</lightning-card>
-<br>
-<lightning-card title="OBJECT DATA TO CHILD">
-
-
-    <lightning-input 
-    type="text" 
-    label="Lutfen Musteri isim giriniz" 
-    onblur={handleCustomerIsim}></lightning-input>
-
-    <lightning-input 
-    type="text" 
-    label="Lutfen Musteri YAS giriniz" 
-    onblur={handleCustomerYAS}></lightning-input>
-<br>
-
-
-<c-a091object-child >
-
-</c-a091object-child>
-
-</lightning-card>
-
-
-
-</template>
+        type="text" 
+        label="Lutfen isminiz giriniz" 
+        onblur={handleIsim}></lightning-input>
+    
+    
+    <c-a091primitive-child 
+     parentdan-geldi={isim}
+     parenttan-get ={isim}
+     >
+    
+    </c-a091primitive-child>
+    
+    </lightning-card>
+    
+    
+    
+    
+    <br>
+    <lightning-card title="OBJECT DATA TO KEDNIME">
+        <lightning-input 
+        type="text" 
+        label="Lutfen Musteri isim giriniz" 
+        onblur={handleMusteriIsim}></lightning-input>
+    
+        <lightning-input 
+        type="number" 
+        label="Lutfen Musteri YAS giriniz" 
+        onblur={handleMusteriYAS}></lightning-input>
+    <br>
+      
+    <p>  musteri ismi {musteri.isim}</p>
+    <p>  musteri yasi {musteri.yas}</p>
+    
+    
+    </lightning-card>
+    <br>
+    <lightning-card title="** OBJECT DATA TO CHILD">
+    
+    
+        <lightning-input 
+        type="text" 
+        label="Lutfen Musteri isim giriniz" 
+        onblur={handleCustomerIsim}></lightning-input>
+    
+        <lightning-input 
+        type="number" 
+        label="Lutfen Musteri YAS giriniz" 
+        onblur={handleCustomerYAS}></lightning-input>
+    <br>
+    
+    
+    <c-a091object-child 
+     child-musteri ={customer}
+     get-parentdan-obj= {customer}>
+    
+    </c-a091object-child>
+    
+    </lightning-card>
+    
+    
+    
+    </template>
