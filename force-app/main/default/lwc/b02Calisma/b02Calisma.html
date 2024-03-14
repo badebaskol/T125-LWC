@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Contacts ">
+      
+      <div>
+        
+        <template for:each={cntListesi} for:item="cnt">
+            <div key={cnt.id}>
+                <p>Contact Name >>> {cnt.Name} </p>
+            </div>
+        </template>
+        
+      </div>
+      <br>
+
+      <lightning-input
+      type="text" 
+    label="Adinizi giriniz"     
+    onchange ={handleCnt}>
+
+      </lightning-input>
+
+
+    </lightning-card>
+</template>

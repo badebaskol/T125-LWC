@@ -2,7 +2,7 @@ import { LightningElement , api, track } from 'lwc';
 
 export default class A08ApiVeTrackDecorators extends LightningElement {
 
-// @api decorator
+// @api decorator(primitive data ve method icin)
 @api recordId;
 
 yeniad='xxxx'
@@ -26,7 +26,7 @@ console.log('BIREYIN ISMI >>> '+ this.birey.isim)
 
 }
 
-// liste icin @track decorator
+// liste ve object icin @track decorator
 
 @track
 cicekListesi = [
