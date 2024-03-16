@@ -1,0 +1,50 @@
+<template>
+    <lightning-card title="Custome Event Olusturma">
+
+<h1>Parent</h1>
+  <br>
+  
+  <h1>bu event childda custom olarak olustu>>> {bilgi}</h1>
+  <c-a13-child-bir
+  
+  onelma={handleElma}
+  
+  ></c-a13-child-bir>
+
+    </lightning-card>
+
+<br>
+
+<lightning-card title="Custom event ile Primitive data gonder">
+<h1>Parent</h1>
+
+<h1>Buu bilgi childdan geldi>>> {childPrimitiveBilgi}</h1>
+
+<c-a13child-iki-primitive
+    onkiraz={handleKiraz}>
+
+</c-a13child-iki-primitive>
+
+</lightning-card>
+<br>
+
+<lightning-card title="Childdan object alma">
+    <h1>Parent</h1>
+
+    <h1>musteri ismi>>> {musteri.isim}</h1>
+    <h1>musteri yasi>>> {musteri.yas}</h1>
+    
+<c-a13child-uc-object
+
+    onayva={handleAyva}>
+
+</c-a13child-uc-object>
+
+
+</lightning-card>
+
+
+
+
+
+</template>

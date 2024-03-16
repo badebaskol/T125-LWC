@@ -1,0 +1,24 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <lightning-quick-action-panel header="****Edit fields Action*****">
+        <lightning-record-edit-form  record-id={recordId} 
+                                    object-api-name={objectApiName}
+                                    onsuccess={handleSuccess}>
+    <lightning-input-field field-name="Name"></lightning-input-field>
+<!--Opp icin --> <lightning-input-field field-name="CloseDate"></lightning-input-field>
+<!--Opp icin --> <lightning-input-field field-name="StageName"></lightning-input-field>
+<!--Opp icin --> <lightning-input-field field-name="Amount"></lightning-input-field>
+            
+<!--Acc icin --><lightning-input-field field-name="Fax"></lightning-input-field>
+<!--Acc icin --><lightning-input-field field-name="Industry"></lightning-input-field>
+<!--Acc icin --><lightning-input-field field-name="AnnualRevenue"></lightning-input-field>
+<!--Acc icin --><lightning-input-field field-name="Rating"></lightning-input-field>           
+            
+            
+        <lightning-button variant="neurtal" label="Cancel"></lightning-button>
+        <lightning-button variant="brand" type="submit" label="SAVE"></lightning-button>
+
+        </lightning-record-edit-form>
+
+    </lightning-quick-action-panel>
+</template>
