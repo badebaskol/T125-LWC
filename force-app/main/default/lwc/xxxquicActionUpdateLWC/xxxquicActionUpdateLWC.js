@@ -5,7 +5,7 @@ import {CloseActionScreenEvent} from 'lightning/actions'
 
 export default class AaaquicActionUpdateLWC extends LightningElement {
 @api recordId
-@api objectApiName
+@api objectApiName //recordun turunu (opp,account,case...) tutar
 handleSuccess(e){
     this.dispatchEvent( new CloseActionScreenEvent());
     this.dispatchEvent(

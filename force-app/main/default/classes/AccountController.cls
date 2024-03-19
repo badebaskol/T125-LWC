@@ -43,6 +43,7 @@ return accList;
     }
 
 
+
     @AuraEnabled
 public static string accountOlustur( string accIsim , string accTel      ){
    
@@ -72,6 +73,26 @@ if(accIsim != null){
 
     return sonuc;
 }
+
+
+
+@AuraEnabled(cacheable=true)
+public static list<Account> fetchAccounts(){
+ list<Account> accList= new List<account>();
+ 
+ try {
+accList = [SELECT id, name, phone
+                                 FROM Account
+                                 WHERE phone != NULL
+                                 WITH SECURITY_ENFORCED LIMIT 5];
+ } catch (Exception e) {
+     throw new AuraHandledException(e.getMessage());
+ }
+return accList;
+}
+
+
+
 
 
 

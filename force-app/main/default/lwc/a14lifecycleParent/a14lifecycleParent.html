@@ -1,0 +1,43 @@
+<template>
+  <lightning-card title="LWC Component Lifecycle " >
+<p> BURASI PARENT </p>
+
+<br>
+
+<br>
+
+<lightning-input 
+   type="text" 
+   label="isim giriniz" 
+   onchange={handleName}></lightning-input>
+
+<br>
+<template if:true={flag}>
+  <c-a14lifecycle-child>
+
+  </c-a14lifecycle-child>
+
+</template>
+   
+
+<br>
+<lightning-button 
+variant="success" 
+label="Goster"
+ title="Successful action"
+ onclick={handleGoster}
+  class="slds-m-left_x-small"></lightning-button>
+
+  <lightning-button 
+  variant="destructive" 
+  label="GIZLE" title="Destructive action"
+  onclick={handleGizle} 
+ class="slds-m-left_x-small"></lightning-button>
+
+<br>
+
+
+  </lightning-card> 
+
+
+</template>

@@ -1,0 +1,59 @@
+<template>
+    <lightning-card title="Related Records">
+        <div class="slds-p-around_medium">
+            <div class="slds-p-around_medium lgc-bg">
+                <lightning-input 
+                    type="text" 
+                    label="Account Name"
+                    onchange={handleAccountNameChange}
+                    required
+                ></lightning-input>
+            </div>
+            <lightning-button label="Get Related Records!!" onclick={handleGetRelatedRecords}></lightning-button>
+            <template if:true={relatedRecords}>
+                <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">Contact Name</th>
+                            <th scope="col">Opportunity Name</th>
+                            <th scope="col">Case Subject</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template for:each={contList} for:item="con">
+                            <tr key={con.Id}>
+                                <td>{con.Name}</td>
+                                <td>
+
+
+
+                                    <template if:true={relatedRecords.oppList}>
+                                        <template for:each={relatedRecords.oppList} for:item="opp">
+                                            <span key={opp.Id}>{opp.Name}</span>
+                                        </template>
+                                    </template>
+                                    <template if:false={relatedRecords.oppList}>
+                                        <span style="color: red;">No Opportunity</span>
+                                    </template>
+                                </td>
+
+
+                                
+                                <td>
+                                    <template if:true={relatedRecords.caseList}>
+                                        <template for:each={relatedRecords.caseList} for:item="cse">
+                                            <span key={cse.Id}>{cse.Subject}</span>
+                                        </template>
+                                    </template>
+                                    <template if:false={relatedRecords.caseList}>
+                                        <span style="color: red;">No Case</span>
+                                    </template>
+                                </td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </template>
+        </div>
+    </lightning-card>
+</template>
