@@ -2,8 +2,9 @@ public with sharing class OrnekWrapperClass {
    
     @AuraEnabled(cacheable=true)        
     public static accountWrapperClass ornekWrapperMethod(string accountName) {
+        String key = '%' + accountName + '%';
         list<Account> accList = [select id, name, (select id, name from contacts LIMIT 1),(select id, name from opportunities LIMIT 1),
-                                 (select id, Subject from cases) from Account where name =:accountName];
+                                 (select id, Subject from cases) from Account where name =:key];
         
         accountWrapperClass currentWrapper = new accountWrapperClass();
         currentWrapper.conList = accList[0].contacts;

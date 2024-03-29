@@ -1,0 +1,18 @@
+.outerClass{
+    background-color: blue;
+    border:2px solid black;
+    width: 300px;
+    height: 300px;
+}
+.middleClass{
+    background-color: green;
+    border:2px solid black;
+    width: 200px;
+    height: 200px;
+}
+.innerClass{
+    background-color: red;
+    border:2px solid black;
+    width: 100px;
+    height: 100px;
+}
