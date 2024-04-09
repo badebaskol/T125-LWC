@@ -41,7 +41,7 @@ if(this.parola == this.inputParola){
 
 durum1 = false
 durum2 = false
-durum3 = false
+durum3 = true
 
 
 

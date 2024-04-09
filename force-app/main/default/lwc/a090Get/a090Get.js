@@ -24,6 +24,7 @@ export default class A090Get extends LightningElement {
 
 // get calisir
 girilenIndex=0
+
 handleIndex(armut){
     this.girilenIndex = parseInt(armut.target.value)
 }
