@@ -8,8 +8,8 @@ public with sharing class AccountController {
     
     try {
         
-// not  query illa altaki gibi yapilmak zorunda degil  
-// string ile de query yapabileisiniz
+// not  query illa alttaki gibi yapilmak zorunda degil  
+// string ile de query yapabiliriz
 
   accList = [SELECT id, name, phone
                                     FROM Account
